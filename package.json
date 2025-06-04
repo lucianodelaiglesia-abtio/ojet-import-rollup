@@ -32,7 +32,8 @@
     "prebundle": "node scripts/hooks/prebuild_rollup.js",
     "bundle": "npx rollup -c",
     "copybundle": "node scripts/hooks/copy_bundle_to_dist.js",
-    "build": "npm run prebundle && npm run bundle && npm run copybundle"
+    "build": "npm run prebundle && npm run bundle && npm run copybundle",
+    "serve": "npx serve dist -l 3000"
   },
   "engines": {
     "node": ">=16.0.0"
