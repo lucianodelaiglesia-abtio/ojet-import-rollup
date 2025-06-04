@@ -1,0 +1,41 @@
+{
+  "name": "ojet-import-rollup",
+  "version": "1.0.0",
+  "description": "An Oracle JavaScript Extension Toolkit(JET) web app",
+  "dependencies": {
+    "@oracle/oraclejet": "~18.1.0",
+    "@oracle/oraclejet-core-pack": "~18.1.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.27.4",
+    "@babel/preset-env": "^7.27.2",
+    "@oracle/ojet-cli": "~18.1.0",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-commonjs": "^28.0.3",
+    "@rollup/plugin-node-resolve": "^16.0.1",
+    "@rollup/plugin-typescript": "^12.1.2",
+    "babel-loader": "^10.0.0",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "extract-zip": "^1.7.0",
+    "fs-extra": "^8.1.0",
+    "glob": "10.4.5",
+    "rollup": "^2.79.2",
+    "rollup-plugin-terser": "^7.0.2",
+    "typescript": "^5.7.2",
+    "underscore": "^1.10.2",
+    "webpack": "^5.99.9",
+    "webpack-cli": "^6.0.1",
+    "yargs-parser": "13.1.2"
+  },
+  "scripts": {
+    "prebundle": "node scripts/hooks/prebuild_rollup.js",
+    "bundle": "npx rollup -c",
+    "copybundle": "node scripts/hooks/copy_bundle_to_dist.js",
+    "build": "npm run prebundle && npm run bundle && npm run copybundle"
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  },
+  "private": true
+}

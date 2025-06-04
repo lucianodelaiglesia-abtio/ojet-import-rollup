@@ -1,0 +1,13 @@
+{
+  "name": "custom-pack",
+  "version": "1.0.0",
+  "jetVersion": "^18.1.1",
+  "type": "pack",
+  "displayName": "A user friendly, translatable name of the pack.",
+  "description": "A translatable high-level description for the pack.",
+  "dependencies": {
+    "custom-pack-custom-checkbox-set": "1.0.0",
+    "custom-pack-custom-comments": "1.0.0",
+    "custom-pack-custom-single-select": "1.0.0"
+  }
+}
