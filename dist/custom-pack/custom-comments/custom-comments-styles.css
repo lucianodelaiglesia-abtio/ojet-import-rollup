@@ -1,0 +1,22 @@
+/* This file is where css selectors for the component go.
+   There will be hard coded properties and properties controlled by variables, for example
+
+   custom-pack-custom-comments .custom-pack-custom-comments-value-text {
+   color: var(--custom-pack-custom-comments-value-text-color);
+   display: inline-block;
+	 }
+*/
+
+custom-pack-custom-comments:not(.oj-complete){
+  visibility: hidden;
+}
+
+custom-pack-custom-comments{
+	min-height: 50px;
+	width: 50px;
+}
+
+custom-pack-custom-comments[hidden]
+{
+  display: none;
+}

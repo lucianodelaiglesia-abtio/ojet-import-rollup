@@ -1,0 +1,22 @@
+/* This file is where css selectors for the component go.
+   There will be hard coded properties and properties controlled by variables, for example
+
+   custom-pack-custom-single-select .custom-pack-custom-single-select-value-text {
+   color: var(--custom-pack-custom-single-select-value-text-color);
+   display: inline-block;
+	 }
+*/
+
+custom-pack-custom-single-select:not(.oj-complete){
+  visibility: hidden;
+}
+
+custom-pack-custom-single-select{
+	min-height: 50px;
+	width: 50px;
+}
+
+custom-pack-custom-single-select[hidden]
+{
+  display: none;
+}
