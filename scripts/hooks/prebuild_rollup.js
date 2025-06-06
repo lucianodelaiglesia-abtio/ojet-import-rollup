@@ -16,8 +16,8 @@ components.forEach(component => {
     // Remove ojL10n! require/imports for Rollup build
     content = content.replace(/import\s+\w+\s+=\s+require\(["']ojL10n![^)]*\);?/g, '// [REMOVED FOR ROLLUP BUILD]');
     fs.writeFileSync(outputPath, content);
-    console.log(`✔ Archivo .tsx generado para ${component} sin ojL10n!`);
+    console.log(`✔ .tsx file generated for ${component} without ojL10n!`);
   } else {
-    console.warn(`⚠️  No se encontró el archivo ${inputPath}`);
+    console.warn(`⚠️  File not found: ${inputPath}`);
   }
 });
