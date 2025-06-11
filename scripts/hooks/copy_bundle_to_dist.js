@@ -25,6 +25,15 @@ cssFiles.forEach(srcFile => {
   fse.copySync(srcFile, destFile);
 });
 
+// Copy component.json files for each component
+const componentJsonFiles = glob.sync('src/components/custom-pack/*/component.json');
+componentJsonFiles.forEach(srcFile => {
+  const relPath = path.relative('src/components', srcFile); // e.g., custom-pack/oj-gt-comment/component.json
+  const destFile = path.join(distDir, relPath);
+  fse.ensureDirSync(path.dirname(destFile));
+  fse.copySync(srcFile, destFile);
+});
+
 // Copy i18n files from all components to dist/resources/nls/
 const i18nFiles = glob.sync('src/components/custom-pack/*/resources/nls/root/*.ts'); // or *.js if you have JS
 i18nFiles.forEach(srcFile => {
@@ -42,7 +51,9 @@ fse.ensureDirSync(nlsDir);
 const nlsFiles = [
   'custom-checkbox-set-strings.js',
   'custom-comments-strings.js',
-  'custom-single-select-strings.js'
+  'custom-single-select-strings.js',
+  'oj-gt-comment-strings.js',
+  'oj-gt-button-group-strings.js',
 ];
 
 nlsFiles.forEach(file => {

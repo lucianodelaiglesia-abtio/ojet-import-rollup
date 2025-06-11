@@ -3,13 +3,13 @@ import commonjs from '@rollup/plugin-commonjs';
 import babel from '@rollup/plugin-babel';
 import { terser } from 'rollup-plugin-terser';
 import typescript from '@rollup/plugin-typescript';
+import json from '@rollup/plugin-json';
 
 export default {
   input: 'src/components/custom-pack/index.ts',
   output: {
     file: 'web/components/custom-pack.bundle.js',
     format: 'amd',
-    name: 'CustomPack',
     sourcemap: true
   },
   external: ['ojs/ojcore',
@@ -20,6 +20,7 @@ export default {
   plugins: [
     resolve(),
     commonjs(),
+    json(),
     typescript({ tsconfig: './tsconfig.rollup.json' }),
     babel({
       babelHelpers: 'bundled',

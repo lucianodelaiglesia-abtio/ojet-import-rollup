@@ -4,7 +4,9 @@ const path = require('path');
 const components = [
   'custom-checkbox-set',
   'custom-comments',
-  'custom-single-select'
+  'custom-single-select',
+  'oj-gt-comment',
+  'oj-gt-button-group',
 ];
 
 components.forEach(component => {

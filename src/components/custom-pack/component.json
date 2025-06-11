@@ -8,6 +8,8 @@
   "dependencies": {
     "custom-pack-custom-checkbox-set": "1.0.0",
     "custom-pack-custom-comments": "1.0.0",
-    "custom-pack-custom-single-select": "1.0.0"
+    "custom-pack-custom-single-select": "1.0.0",
+    "custom-pack-oj-gt-comment": "1.0.0",
+    "custom-pack-oj-gt-button-group": "1.0.0"
   }
 }

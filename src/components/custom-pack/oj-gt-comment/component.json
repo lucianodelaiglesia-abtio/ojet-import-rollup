@@ -1,0 +1,18 @@
+{
+  "name": "custom-pack-oj-gt-comment",
+  "version": "1.0.0",
+  "displayName": "Comment",
+  "description": "Custom component to display a simple comment",
+  "properties": {
+    "label": {
+      "type": "string"
+    },
+    "value": {
+      "type": "string",
+      "writeback": true
+    },
+    "rows": {
+      "type": "number"
+    }
+  }
+}
